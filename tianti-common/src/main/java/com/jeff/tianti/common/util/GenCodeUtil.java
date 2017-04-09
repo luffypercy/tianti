@@ -390,7 +390,7 @@ public class GenCodeUtil {
 		 * @throws IOException 
 		 */
 		public static void createStandardAddJsp(String jspPath) throws IOException{
-			String fileName = System.getProperty("user.dir") + "/WebRoot/WEB_INF/" + jspPath+""
+			String fileName = System.getProperty("user.dir") + "/src/main/webapp/WEB-INF/views/" + jspPath+""
 					+ "/add.jsp";
 			File f = new File(fileName);
 			FileWriter fw = new FileWriter(f);

@@ -1,8 +1,10 @@
-package com.jeff.tianti.org;
+
 
 import java.io.IOException;
 
 import com.jeff.tianti.common.util.GenCodeUtil;
+import com.jeff.tianti.org.entity.XcFundsRecordModel;
+import com.jeff.tianti.org.entity.XcRechargeOrderModel;
 import com.jeff.tianti.org.entity.XcUserModel;
 
 public class GenCodeTest {
@@ -25,13 +27,14 @@ public class GenCodeTest {
 	 * @throws IOException
 	 */
 	public static void autoGenAllCode(Class c,String commonPackage,String writer) throws IOException{
-		GenCodeUtil.createQueryDTO(c, commonPackage, writer);
-//		GenCodeUtil.createFrontQueryDTO(c, commonPackage, writer);
-		GenCodeUtil.createDaoCustomInterface(c,commonPackage,writer);
-		GenCodeUtil.createDaoInterface(c,commonPackage,writer);
-		GenCodeUtil.createDaoClass(c,commonPackage,writer);
-		GenCodeUtil.createServiceClass(c,commonPackage,writer);
-		//GenCodeUtil.createControllerClass(c, commonPackage, "com.jeff.tianti.controller", writer, true);
+//		GenCodeUtil.createQueryDTO(c, commonPackage, writer);
+////		GenCodeUtil.createFrontQueryDTO(c, commonPackage, writer);
+//		GenCodeUtil.createDaoCustomInterface(c,commonPackage,writer);
+//		GenCodeUtil.createDaoInterface(c,commonPackage,writer);
+//		GenCodeUtil.createDaoClass(c,commonPackage,writer);
+//		GenCodeUtil.createServiceClass(c,commonPackage,writer);
+		GenCodeUtil.createStandardAddJsp("/xcusers");
+		GenCodeUtil.createControllerClass(c, commonPackage, "com.jeff.tianti.controller", writer, true);
 	}
 
 }
